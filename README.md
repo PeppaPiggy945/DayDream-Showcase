@@ -107,9 +107,6 @@ flowchart TB
     master --> plugins
     master --> kernel --> state --> storage
     plugins -. "只通过声明式钩子接入" .-> kernel
-
-    click api "#" "api"
-    click kernel "#" "kernel"
 ```
 
 - **kernel**（2,668 行 / 26 文件）只认识抽象的 `progress(int)` 与 capability 列表，"时间"是可替换的历法插件；
