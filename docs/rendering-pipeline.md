@@ -13,7 +13,7 @@ flowchart LR
     L --> OUT["优美原文 → 读者"]
     subgraph down["下行：文本 → 结构化事件"]
       L --> PA["parser 剥离<br/>who / what / where"]
-      PA --> CORE["信息核<br/>5–10 倍压缩"]
+      PA --> CORE["信息核<br/>2–3 倍压缩"]
       CORE --> OTH["投递给场景中其他角色"]
     end
 
@@ -51,7 +51,7 @@ flowchart LR
 > 一次昂贵 LLM 生成，两次消费。
 
 1. **优美原文**给读者看；
-2. parser 剥离出 who / what / where **信息核**，以 **5–10 倍压缩比**投递给场景中其他角色；
+2. parser 剥离出 who / what / where **信息核**，以 **2–3 倍压缩比**（随消费场景细化仍有扩大潜力）投递给场景中其他角色；
 3. 下游角色基于信息核（而非全文）反应。
 
 这同时解决了两个问题：
